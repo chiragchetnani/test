@@ -1,0 +1,1 @@
+USER DATA Context SMALL MODEL similarity Threshold SIMILARITY DATA ANSWER QUERY 1 If similarity Threshold USER BATA LLM API Threshold = 70%

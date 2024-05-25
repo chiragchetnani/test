@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLM Chat App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar" id="sidebar">
+            <button id="toggleSidebar" class="toggle-sidebar" type="button">Toggle Sidebar</button>
+            <div class="file-upload-section">
+                <h3>File Upload</h3>
+                <input type="file" id="fileInput" multiple style="display: none;">
+                <button id="uploadButton" type="button">Choose Files</button>
+                <div class="uploaded-files">
+                    <h4>Uploaded Files</h4>
+                    <ul id="uploadedFilesList"></ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-area">
+            <img src="https://i.ibb.co/GJnQ4jf/Untitled-design.png" class="chat-logo" alt="Chat Logo">
+            <div class="chat-messages" id="chatMessages">
+            </div>
+
+            <div class="input-area">
+                <img src="{{ url_for('static', filename='avatar.png') }}" class="avatar" alt="User Avatar">
+                <input type="text" id="userInput" placeholder="Type your message..." aria-label="Message Input">
+                <button id="sendButton" type="button">Send</button>
+            </div>
+
+            <div class="watermark">LLM Chat</div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
